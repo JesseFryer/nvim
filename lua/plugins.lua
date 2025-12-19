@@ -26,16 +26,29 @@ require("lazy").setup({
 	'ellisonleao/gruvbox.nvim',
 
 	-- Fuzzy finder
-	'ibhagwan/fzf-lua',
+    {
+        'ibhagwan/fzf-lua',
+        config = function()
+            require("fzf-lua").setup {
+                defaults = { 
+                    file_icons = false,
+                    previewer = false,
+                    winopts = {
+                        width = 0.5,
+                        height = 0.5,
+                        border = "single",
+                        backdrop = 85,
+                    },
+                },
+            }
+        end,
+    },
 
 	-- File tree
     {
         "nvim-tree/nvim-tree.lua",
         version = "*",
         lazy = false,
-        --dependencies = {
-        --    "nvim-tree/nvim-web-devicons",
-        --},
         config = function()
             require("nvim-tree").setup {}
         end,

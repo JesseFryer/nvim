@@ -7,11 +7,11 @@ cmp.setup({
     },
     window = {
         completion = {
-            border = "rounded",
+            border = "single",
             winhighlight = "Normal:Normal,FloatBorder:Normal,CursorLine:PmenuSel,Search:None",
         },
         documentation = {
-            border = "rounded",
+            border = "single",
             winhighlight = "Normal:Normal,FloatBorder:Normal,CursorLine:PmenuSel,Search:None",
         },
     },

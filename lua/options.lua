@@ -8,5 +8,6 @@ vim.o.shiftwidth = 4
 vim.o.signcolumn = "yes"
 vim.o.scrolloff = 10
 vim.o.swapfile = false
+vim.o.wrap = false
 
 vim.cmd[[colorscheme gruvbox]]
