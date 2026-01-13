@@ -41,3 +41,5 @@ vim.api.nvim_set_keymap('n', '<leader>fg', ':FzfLua grep_project<CR>', { noremap
 -- File tree
 vim.api.nvim_set_keymap('n', '<leader>t', ':NvimTreeToggle<CR>', { noremap = true })
 
+-- Enter terminal command
+vim.api.nvim_set_keymap('n', '<leader>et', ':terminal ', { noremap = true })
