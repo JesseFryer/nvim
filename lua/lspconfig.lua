@@ -1,5 +1,5 @@
+-- C/C++
 vim.lsp.config.clangd = {
-  -- Command and arguments to start the server.
   cmd = { 'clangd' },
   filetypes = {
       'c',
@@ -7,11 +7,31 @@ vim.lsp.config.clangd = {
       'h',
       'hpp',
   },
-  root_markers = { { 'compile_commands.json' }, '.git' },
+  root_markers = {
+      'compile_commands.json',
+      '.git',
+  },
   settings = {}
 }
 vim.lsp.enable('clangd')
 
+-- Zig
+vim.lsp.config.clangd = {
+  cmd = { 'zls' },
+  filetypes = {
+      'zig', 
+      'zon',
+  },
+  root_markers = {
+      'zls.json',
+      'build.zig',
+      '.git',
+  },
+  settings = {}
+}
+vim.lsp.enable('zls')
+
+-- TS/JS
 vim.lsp.config.tsserver = {
   cmd = { "typescript-language-server", "--stdio" },
   filetypes = {
@@ -26,6 +46,7 @@ vim.lsp.config.tsserver = {
 }
 vim.lsp.enable("tsserver")
 
+-- HTML
 vim.lsp.config.html = {
   cmd = { "vscode-html-language-server", "--stdio" },
   filetypes = {
@@ -35,6 +56,7 @@ vim.lsp.config.html = {
 }
 vim.lsp.enable("html")
 
+-- CSS
 vim.lsp.config.cssls = {
   cmd = { "vscode-css-language-server", "--stdio" },
   filetypes = {
